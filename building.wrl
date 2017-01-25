@@ -1,0 +1,122 @@
+#VRML V2.0 utf8
+
+#Definition of Proximity objects via specific range
+
+Group {
+
+	children [
+
+		Transform {
+
+			translation 0 3 8
+		
+			children DEF P1 ProximitySensor {
+
+			#enabled	TRUE
+			#center 0 0 0
+			size 8 8 8
+
+			  }
+		   }
+
+		Transform {
+
+		    translation 0 3 40
+
+			children DEF P2 ProximitySensor {
+
+			#enabled	TRUE
+			#center 0 0 0
+			size 10 10 10
+
+			 }
+		  }
+
+		#Fog placement via specific color and range
+
+		DEF	F1 Fog {
+
+		color 0.5 0.5 0.5		 #gray
+		fogType "LINEAR"
+		visibilityRange 5
+
+		}
+
+
+		DEF	F2 Fog {
+
+		color 0.8 0.8 0.8	     #black
+		fogType "LINEAR"
+		visibilityRange 5
+
+		}
+  ]
+}
+
+
+Transform {
+	
+	children [
+	
+
+	#Item placement via material, lightness, texture and appearence
+		
+	DEF factory Shape {
+
+    appearance	Appearance {
+	material DEF tall_building Material {
+	#diffuseColor	0 1 0
+	emissiveColor	0.6 0.5 0.4
+	shininess	0.8
+	transparency	0.4
+
+      } 
+	 
+
+	texture	ImageTexture {
+	  url "structure/front.png"
+	  repeatS FALSE
+	  repeatT FALSE
+	  	}
+
+      }
+
+      geometry	Box {
+
+		size	2 9 20
+      }
+
+    }
+	
+
+	#Light camera placement with specific properties
+
+	DirectionalLight {
+
+		color 0.5 0.5 0.5
+		ambientIntensity 1
+		direction -.707 -.707 0 
+		intensity 1
+	}
+
+	#Collision detection for building
+
+	Collision {
+
+	 collide TRUE
+	}
+
+]
+    translation	-11 3 -5
+  
+}
+ 
+
+
+#Attach fox objects for use into Proximity
+
+ROUTE P1.isActive TO F1.set_bind
+
+ROUTE P2.isActive TO F2.set_bind
+
+

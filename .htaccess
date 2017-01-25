@@ -1,0 +1,4 @@
+
+#AddType x-world/x-vrml
+
+DirectoryIndex index.cfm

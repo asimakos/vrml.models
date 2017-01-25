@@ -1,0 +1,737 @@
+#VRML V2.0 utf8
+
+#Cosmo Worlds V2.0
+
+#Camera Placement points
+
+Viewpoint {
+  position	8 0 -5
+  orientation	0 1 0  1.6
+  fieldOfView	1.5
+
+  description "front side view"
+}
+
+
+Viewpoint {
+  position	-15 0 8
+  orientation	0 0 0  0
+  fieldOfView	1.5
+
+  description "left side view"
+}
+
+
+Viewpoint {
+  position	2 0 -15
+  orientation	0 1 0  1.9
+  fieldOfView	1.5
+
+  description "right side view"
+}
+
+Transform { children [
+
+#Definition of horizon, ground via Background object weather
+
+DEF weather Background {     
+
+  groundAngle   1.5
+  groundColor   [ 0.05 0.1 0.05,
+                  0.05 0.1 0.05 ]
+  skyAngle      [ 1.047, 2.094 ]
+  skyColor      [ 0.1 0.1 0.5,
+                  0.2 0.2 0.6,
+                  0.6 0.6 0.7 ]
+
+
+  }
+
+]}
+
+#Items Placement
+
+Transform {
+  children	  DEF Tree3 Shape {
+    appearance	Appearance {
+
+	  #Definition of tree object big_tree31 by material
+
+      material DEF	big_tree31 Material {
+
+		diffuseColor	0 1  0
+		emissiveColor	0.3 0.6 0.4
+		shininess	0.8
+		transparency	0.4
+      }
+
+      texture	ImageTexture {
+
+		url	"images/tree3.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 3.5 1
+    }
+
+  }
+
+  translation	2.5 0 0
+}
+
+
+Transform {
+
+  #Definition of tree object by Shape
+
+  children	  DEF Tree1 Shape {
+
+    appearance	Appearance {
+
+   #Inheritance of tree object big_tree31 by material
+        
+	material USE big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree1.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 3 1
+    }
+
+  }
+
+  translation	-3 0 0
+}
+
+
+  
+Transform {
+  children	  DEF Tree2 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree2.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 1 1
+    }
+
+  }
+
+  translation	-1 -1 -2.5
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree2.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 1 1
+    }
+
+  } 
+	
+   translation	1 -1 -2.5
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree2.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 1 1
+    }
+
+  } 
+
+translation	4 -1 -2.5
+
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree2.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 1 1
+    }
+
+  } 
+
+translation	2.5 -1 -2.5
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree2.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 1 1
+    }
+
+  } 
+
+ translation	-2.5 -1 -2.5
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree2.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 1 1
+    }
+
+  } 
+ translation	-1 -1 -7
+
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree2.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 1 1
+    }
+
+  } 
+
+  translation	1 -1 -7
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree2.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 1 1
+    }
+
+  } 
+
+  translation   4 -1 -7
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree2.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 1 1
+    }
+
+  } 
+
+  translation   -4 -1 -7
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		 url "images/tree2.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 1 1
+    }
+
+  } 
+
+  translation   2.5 -1 -7
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree2.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 1 1
+    }
+
+  } 
+
+  translation  -2.5 -1 -7
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree1.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 1 1
+    }
+
+  } 
+
+  translation  -2.5 -1 -7
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree1.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 3 1
+    }
+
+  } 
+
+  translation  -1.5 0 0
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree1.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 3 1
+    }
+
+  } 
+
+  translation  -4.5 0 0
+}
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree1.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 3 1
+    }
+
+  } 
+
+  translation  1 0 0
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree1.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 3 1
+    }
+
+  } 
+
+  translation  -1.5 0 -9.5
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree1.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 3 1
+    }
+
+  } 
+
+  translation  -4.5 0 -9.5
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree1.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 3 1
+    }
+
+  } 
+
+  translation  1 0 -9.5
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree1.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 3 1
+    }
+
+  } 
+
+  translation  -3 0 -9.5
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree3.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 3 1
+    }
+
+  } 
+
+  translation  4 0 0
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree3.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 3 1
+    }
+
+  } 
+
+  translation  4 0 -9.5
+}
+
+
+Transform {
+
+   children	 Shape {
+
+    appearance	Appearance {
+    
+	material  USE  big_tree31
+
+      texture	ImageTexture {
+
+		url	"images/tree3.jpg"
+      }
+
+    }
+
+    geometry	Box {
+      size	1 3 1
+    }
+
+  } 
+
+  translation  2.5 0 -9.5
+}
+
+#Embed an external file object via some spatial properties
+
+Inline {
+
+	url	"building.wrl"
+    bboxCenter -11 3 -5
+	bboxSize 9 10 5
+	
+}
+
+#Definition of Collisions via inheritance of 
+#tree object Tree1 - Tree2 - Tree3 by Shape 
+
+Collision {
+
+	collide	TRUE
+
+	children USE Tree1
+
+}
+
+
+Collision {
+
+	collide	TRUE
+
+	children USE Tree2
+
+}
+
+
+Collision {
+
+	collide	TRUE
+
+	children USE Tree3
+
+}
+
+
+#Definition of touch via speficic touch script js function 
+
+DEF big_tree TouchSensor {
+}
+
+DEF yellow_color Script {
+  eventIn      SFBool	isActive
+  eventOut     SFColor	color
+  field        SFColor	activeColor	0 0.8 0
+  field        SFColor	nactiveColor 0 0.2 0
+  url	"javascript:
+
+// Handler for event isActive of type SFBool
+
+function isActive (kvalue){
+ if (kvalue==true)
+     color=activeColor;
+ else
+	 color=nactiveColor;
+}
+"
+}
+
+#Definition of touch events via inheritance of tree object big_tree31 by material
+
+ROUTE big_tree.isOver TO yellow_color.isActive
+
+#Definition of specific color for touch event of tree object big_tree31 by material
+
+ROUTE yellow_color.color TO big_tree31.emissiveColor
+
+
+
+
+

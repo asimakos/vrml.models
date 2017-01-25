@@ -1,0 +1,118 @@
+#VRML V2.0 utf8	  
+
+
+
+PointLight {
+	color 1 0 0,
+	ambientIntensity 3,
+	intensity 1,
+	on	TRUE,
+	location 3 5 0,
+
+}
+
+PROTO krzeslo [
+	field SFVec3f pos 0 0 0
+	field SFRotation rot 0 0 1 0
+]{
+	Group {
+		children [
+		
+			#krzesselko
+			Transform {
+				translation	IS  pos
+				rotation IS	 rot
+				children [
+					# siedzisko
+		
+					Transform {	   
+						translation	0 0.42 0
+						children [
+							Shape{
+								geometry Box { size	0.4 0.04 0.4}
+		
+							}
+						]
+					} 
+					# noga front left
+					Transform {	   
+						translation	-0.18 0.2 0.18
+						children [
+							DEF	noga Shape{
+								geometry Box { size	0.04 0.4 0.04}
+								appearance Appearance {
+									material Material {
+										diffuseColor .49 .04 .05
+										specularColor 1 1 1
+										emissiveColor .46 .04 .04
+										ambientIntensity 0
+										transparency .54
+									}
+								}
+							}
+						]
+					} 
+					Transform {	   
+						translation	0.18 0.2 0.18
+						children [
+							USE noga
+						]
+					}
+					Transform {	   
+						translation	0.18 0.2 -0.18
+						children [
+							USE noga
+						]
+					}
+					Transform {	   
+						translation	-0.18 0.2 -0.18
+						children [
+							USE noga
+						]
+					}
+					# oparcie
+					Transform {	   
+						translation	0.2 0.44 0	 
+						rotation 0 0 1 -0.2
+						children [
+							Transform{
+								translation	0.02 0.2 0
+		
+								children [
+									Shape{
+										geometry Box { size	0.04 0.4 0.4}
+										appearance Appearance {
+											material Material {
+												diffuseColor .49 .04 .05
+												specularColor 1 1 1
+												emissiveColor .46 .04 .04
+												ambientIntensity 0
+												transparency .54
+											}
+										}
+									}
+								]
+							}
+						]
+					} 
+				]
+			}
+		
+		]
+	}
+}
+
+krzeslo	{
+	pos	0 0 0
+}
+krzeslo	{
+	pos	-0.8 0 0.5 
+	rot	0 1 0 3.14
+}
+krzeslo	{
+	pos	0 0 0.5
+}
+krzeslo	{
+	pos	-0.8 0 0  	 
+	rot	0 1 0 3.14
+}
